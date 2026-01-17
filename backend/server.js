@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import fetch from "node-fetch";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -16,9 +17,14 @@ app.use(cors());
 app.use(express.json());
 
 
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+
 app.get("/", (req, res) => {
-res.send("API is online!")
+res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
 });
+
+
 
 app.get("/api/pokemon/:name", async(req, res) =>{
     const { name } = req.params;

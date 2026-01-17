@@ -24,7 +24,7 @@ function PokemonSearch(){
             
 
             const response = await fetch(
-                 `${API_URL}/api/pokemon/${search.toLowerCase()}`
+                 `${API_URL}/pokemon/${search.toLowerCase()}`
             );
          
             if(!response.ok){
@@ -62,8 +62,7 @@ function PokemonSearch(){
           <h2 className="karaktär-namn">Namn: {pokemon.name}</h2>
           <p className="karaktär-typ">Typ: {pokemon.types.join(", ")}</p>
           <p className="karaktär-förmåga">Förmågor: {pokemon.abilities.join(", ")}</p>
-           <p>Vikt: {pokemon.weight} kg</p>
-           <p>Längd: {pokemon.height} m</p>
+           
           </>  
         )
 
