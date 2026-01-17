@@ -1,0 +1,65 @@
+/* bakgrund & font */
+* {
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
+  background-color: #3c5aa6;
+}
+
+/* sökfält */
+.sök-fält {
+  padding: 5px 100px;
+  margin-right: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* knapp */
+.submit-knapp {
+  background-color: #FFCB05;
+  color: #3c5aa6;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10%;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.submit-knapp:hover {
+  background-color: #f5b700;
+  padding: 10px 15px;
+}
+
+/* namn */
+.karaktär-namn {
+  background-color: #3c5aa6;
+  color: #FFCB05;
+  text-shadow: 2px 2px 0 #1d2c5e;
+}
+
+/* typ & förmågor */
+.karaktär-typ,
+.karaktär-förmåga {
+  font-size: 20px;
+  background-color: #3c5aa6;
+  color: #FFCB05;
+  text-shadow: 1px 1px 0 #1d2c5e;
+}
+
+/* bild */
+.pokemon-bild {
+  display: block;
+  margin: 15px auto;
+}
+
+/* error */
+.error-msg {
+  font-size: 15px;
+  background-color: #3c5aa6;
+  color: red;
+}
+
+/* mobil */
+@media (max-width: 600px) {
+  .sök-fält {
+    padding: 5px 30px;
+  }
+}
