@@ -34,7 +34,7 @@ function PokemonSearch(){
             setPokemon(data);
         }
  catch(err){
-    setError(error.message || "Pokemon existerar ej");
+    setError("Pokemon existerar ej");
     setPokemon(null);
  } finally{
     setLoading(false);

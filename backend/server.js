@@ -2,6 +2,7 @@ import express from "express";
 import fetch from "node-fetch";
 import cors from "cors";
 import dotenv from "dotenv";
+const cache = {};
 
 
 
@@ -22,6 +23,12 @@ res.send("API is online!")
 app.get("/api/pokemon/:name", async(req, res) =>{
     const { name } = req.params;
      
+    if(cache[name]){
+    return res.json(cache[name]);
+}
+
+
+
     try{
         const response = await fetch(
             `${process.env.POKE_API_BASE}/${name.toLowerCase()}`
@@ -40,16 +47,11 @@ app.get("/api/pokemon/:name", async(req, res) =>{
            abilities: data.abilities.map(a => a.ability.name)
 
         };
-
+        
+        cache[name] = PokemonFigur;
         res.json(PokemonFigur);
 
-        const cache = {};
 
-if(cache[name]){
-    return res.json(cache[name]);
-}
-
-cache[name] = PokemonFigur;
 
 
 
