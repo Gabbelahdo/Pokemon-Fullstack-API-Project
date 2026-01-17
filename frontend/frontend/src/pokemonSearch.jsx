@@ -42,6 +42,7 @@ function PokemonSearch(){
     };
 
     return (
+
         <div className="innehåll">
         <input 
         type="search"
@@ -51,7 +52,6 @@ function PokemonSearch(){
         />
 
         <button className="submit-knapp" onClick={fetchPokemon}>Sök</button>
-
 
         {loading && <p>Laddar Pokemon....</p>}
         {error && <p className="error-msg">{error}</p>}
