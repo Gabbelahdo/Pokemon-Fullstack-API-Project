@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+
+app.get("/", (req, res) => {
+res.send("API is online!")
+});
+
 app.get("/api/pokemon/:name", async(req, res) =>{
     const { name } = req.params;
      

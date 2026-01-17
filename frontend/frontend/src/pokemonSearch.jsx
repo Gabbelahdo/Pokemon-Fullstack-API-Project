@@ -24,7 +24,7 @@ function PokemonSearch(){
             
 
             const response = await fetch(
-                 `${API_URL}/pokemon/${search.toLowerCase()}`
+                 `${API_URL}/api/pokemon/${search.toLowerCase()}`
             );
          
             if(!response.ok){
