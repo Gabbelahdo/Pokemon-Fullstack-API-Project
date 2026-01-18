@@ -8,7 +8,6 @@ function PokemonSearch(){
 
     const API_URL = import.meta.env.VITE_API_URL;
 
-
     const fetchPokemon = async (e) => {
         e.preventDefault();
         if(!search.trim()){
@@ -24,7 +23,7 @@ function PokemonSearch(){
             
 
             const response = await fetch(
-                 `${API_URL}/pokemon/${search.toLowerCase()}`
+                 `${API_URL}/api/pokemon/${search.toLowerCase()}`
             );
          
             if(!response.ok){
