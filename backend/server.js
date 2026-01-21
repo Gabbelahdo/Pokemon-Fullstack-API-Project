@@ -20,7 +20,9 @@ app.use(express.json());
 
 
 
-
+app.get("/", (req, res) => {
+  res.redirect("https://pokemon-api-tan-two.vercel.app/");
+});
 
 
 
